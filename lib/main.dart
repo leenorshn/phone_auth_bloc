@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phone_auth_bloc/auth_screen.dart';
 
 
-
+//bloc integrations
 
 void main() => runApp(OmbreApp());
 
