@@ -1,3 +1,5 @@
+
+//todo : this class will be replace by flutter_bloc and a new logic
 import 'package:flutter/material.dart';
 
 Type _typeOf<T>() => T;
