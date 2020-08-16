@@ -21,33 +21,9 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              StreamBuilder(
-                stream: loginBloc.getPhone,
-                builder: (context,snapshot){
-                  return TextField(
-                    
-                    decoration: InputDecoration(
-                      labelText: 'phone',
-                      errorText: snapshot.error,
-                    ),
-                    onChanged: loginBloc.onPhoneChanged,
-                    keyboardType: TextInputType.number,
-                  );
-                },
-              ),
+              
               SizedBox(),
-              StreamBuilder<bool>(
-                  stream: loginBloc.registerValid,
-                  builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                    return RaisedButton(
-                      child: Text('Register'),
-                      onPressed: (snapshot.hasData && snapshot.data == true)
-                          ? () {
-                        // launch the registration process
-                      }
-                          : null,
-                    );
-                  }),
+              
             ],
           ),
         ),
